@@ -1,1 +1,26 @@
- b=int(b)
+#User function Template for python3
+
+class Solution:
+    def getLastDigit(self,a,b):
+        # converting a and b to int
+        a= int(a)
+        b=int(b)
+        
+        #a^0 = 1
+        if(b == 0):
+            return (1)
+        #0^b= 0    
+        elif (a == 0):
+            return (0)
+        #last digit of a    
+        else:
+            a= (a % 10)
+        # reducing large values for b to smaller since eponention values last digit repeats for every 4 times   
+        #if 0 then wrong output so marking b as 4 if it is 0 
+        if (b % 4) == 0:
+            b = 4
+        else:
+            b = (b % 4)
+        ans = (a ** b)
+        #last digit of ans
+        return (ans % 10)
