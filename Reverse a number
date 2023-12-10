@@ -1,0 +1,25 @@
+
+class Solution:
+	def reverse_digit(self, n):
+		# conert to string
+        a = str(n)
+        #empty to store reversed
+        s=""
+        for i in a:
+            #reverse adding the string each time eg 4601 -> 1. "4" , 2. "6"+"4", 3. "0"+"64", 4. "1" + "064" = "1064"  
+            s = i + s
+        s= int(s)
+        return (s)
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == '__main__':
+	T=int(input())
+	for i in range(T):
+		n = int(input())
+		ob = Solution();
+		ans = ob.reverse_digit(n)
+		print(ans)
+# } Driver Code Ends
