@@ -2,7 +2,7 @@
 class Solution:
     def oddEven (ob,N):
         # code here 
-        if ( N % 2) == 0:
+        if ( N % 2)==0:
             ob = "even"
         else:
             ob = "odd"
