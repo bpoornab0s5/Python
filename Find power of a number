@@ -1,0 +1,25 @@
+class Solution:
+    def power(self,N,R):
+        #This below is equal to (N^R)% 10^9 +7
+        ans = pow(N, R, 10**9 +7)
+        return ans
+
+import math
+
+def main():
+    
+    T=int(input())
+    
+    while(T>0):
+        
+        N=input()
+        R=N[::-1]
+        
+        ob=Solution();
+        ans=ob.power(int(N),int(R))
+        print(ans)
+        
+        T-=1
+
+if __name__=="__main__":
+    main()
